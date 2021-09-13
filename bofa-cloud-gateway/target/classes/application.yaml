@@ -1,0 +1,26 @@
+server:
+  port: 8766
+spring:
+  cloud: 
+   gateway: 
+    routes:
+      - id: bofa-bank-service
+        uri: 'http://localhost:8081'
+        predicates:
+          - Path=/bank/**, /branch/**       
+      - id: bofa-customer-service
+        uri: 'http://localhost:8082'
+        predicates:
+          - Path=/customer/**
+      - id: bofa-account-service
+        uri: 'http://localhost:8083'
+        predicates:
+          - Path=/account/**
+      - id: bofa-transaction-service
+        uri: 'http://localhost:8084'
+        predicates:
+          - Path=/transaction/**
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
