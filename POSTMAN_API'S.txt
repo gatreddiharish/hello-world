@@ -1,0 +1,44 @@
+
+------------------------------------------------------------POSTMAN REQUESTS API'S AND URL'S------------------------------------
+
+
+@POSTMAPPING
+TO CREATE STUDENT DATA INTO THE DATABASE:
+
+url: http://localhost:8081/student/create
+
+postman jason request body:
+
+  {
+    "studentId": 339,
+    "firstName": "Gatreddi",
+    "middleName": "kumar",
+    "lastName": "harish",
+    "contactNo":"9908619661",
+    "address": "dondapudi"
+   }
+
+
+
+@GETMAPPING REQUEST
+TO FIND THE DATA BY STUDENT FIRST NAME:
+
+url: localhost:8081/student/findByFirstName/??
+
+@GETMAPPING REQUEST
+TO FIND THE DATA BY STUDENTID:
+
+url: localhost:8081/student/findByStudentId/?
+
+
+@GETMAPPING REQUEST
+TO FIND ALL STUDENTS FROM THE DATABASE:
+
+url: http://localhost:8081/student/findAllStudents
+
+
+@DELETEMAPPING REQUEST
+TO DELETE DATA FROM THE RECORD:
+
+URL: http://localhost:8081/student/delete/?
+

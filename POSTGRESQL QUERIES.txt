@@ -1,0 +1,22 @@
+
+----------------------------------POSTGRESQL QUERIES------------------------------------------------------
+
+CREATE TABLE studentschema.student
+(
+    student_id integer NOT NULL,
+    first_name text COLLATE pg_catalog."default" NOT NULL,
+    last_name text COLLATE pg_catalog."default" NOT NULL,
+    middle_name text COLLATE pg_catalog."default" NOT NULL,
+    contact_no text COLLATE pg_catalog."default" NOT NULL,
+    address text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT student_pkey PRIMARY KEY (student_id)
+
+
+)
+
+
+INSERT INTO studentschema.student(
+	student_id, first_name, last_name, middle_name, contact_no, address)
+	VALUES (339,'harish', 'kumar', 'gatreddi', '9908619661', 'dondapudi');
+
+)
